@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from blog.models import Blog, Category
+from Blogs.models import Blog, Category
 
 def home(request):
     featured_posts = Blog.objects.filter(featured_post=True, status=1).order_by('-created_at')
